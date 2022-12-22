@@ -106,7 +106,7 @@ function FormManagement() {
                     timer: 1500,
                 });
                 console.log(data);
-                setData(data.filter((item) => item._id !== id));
+                setData(data.filter((item) => item.id !== id));
             })
             .catch((err) => {
                 Swal.fire({
@@ -232,7 +232,7 @@ function FormManagement() {
                                 <Grid item xs={4.5}>
                                     <Item
                                         sx={nameActive}
-                                        onClick={() => handleReadInfo(item._id)}
+                                        onClick={() => handleReadInfo(item.id)}
                                     >
                                         {item.message
                                             ? item.message.slice(0, 30)
@@ -245,10 +245,10 @@ function FormManagement() {
                                             size="medium"
                                             color="error"
                                             onClick={() => {
-                                                // handleDeleteItem(item._id)
-                                                console.log(item._id);
+                                                // handleDeleteItem(item.id)
+                                                console.log(item.id);
                                                 setOpenDeleteModal(true);
-                                                setId(item._id);
+                                                setId(item.id);
                                             }}
                                         >
                                             <DeleteOutline

@@ -75,7 +75,7 @@ const Login = () => {
     };
     const sendRequestSU = async () => {
         const res = await axios
-            .post(`https://showroomcar104.onrender.com/users/login`, {
+            .post(`https://localhost:44387/users/login`, {
                 email: String(inputs.email),
                 password: String(inputs.password),
             })

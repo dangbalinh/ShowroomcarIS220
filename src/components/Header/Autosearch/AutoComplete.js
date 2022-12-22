@@ -14,7 +14,7 @@ const AutoComplete = () => {
 
     const sendRequest = async(query)=>{
       const res = await axios
-      .get(`https://showroomcar104.onrender.com/cars?search=${query}`)
+      .get(`https://localhost:44387/cars?search=${query}`)
       .catch((err)=>console.log(err))
       const data = await res.data.cars;
       console.log(data);
@@ -79,7 +79,7 @@ const AutoComplete = () => {
                   className={classes.submenu}
                 >
                   <Link 
-                  to={`/detailproduct/${suggestion._id}`} style={{color: "black", textDecoration:"none"}}>{suggestion.ten}</Link>
+                  to={`/detailproduct/${suggestion.id}`} style={{color: "black", textDecoration:"none"}}>{suggestion.ten}</Link>
                 </li>
               );
             })}

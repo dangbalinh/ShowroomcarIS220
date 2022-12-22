@@ -144,8 +144,8 @@ function CustomerPopup({type, setType, updateCustomer, setUpdateCustomer }) {
     };
 
     const handleUpdateCustomer = async () => {
-        console.log(updateCustomer._id);
-        HandleApisCustomer.updateCustomer(updateCustomer._id, dataUpdate)
+        console.log(updateCustomer.id);
+        HandleApisCustomer.updateCustomer(updateCustomer.id, dataUpdate)
             .then(async (res) => {
                 await Swal.fire({
                     position: "center",

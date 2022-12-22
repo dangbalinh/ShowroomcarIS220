@@ -32,7 +32,7 @@ function News() {
             {data?.map((news, index) => {
               return (
                 <Link
-                  to={`/readnews/${news._id}`}
+                  to={`/readnews/${news.id}`}
                   key={index}
                   className={styles.link}
                 >

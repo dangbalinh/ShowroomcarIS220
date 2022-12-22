@@ -27,7 +27,7 @@ const DetailOrder = ({item}) => {
       const sendRequestSU = async ()=>{
         if(item){
         const res = await authAxios
-        .get(`/hoadons/${item._id}`)
+        .get(`/hoadons/${item.id}`)
         .catch((err)=>console.log(err))
         const data = await res.data;
         console.log(data);
@@ -35,7 +35,7 @@ const DetailOrder = ({item}) => {
       }
       const getCar = async(macar)=>{
         const res = await axios
-        .get(`https://showroomcar104.onrender.com/cars?macar=${macar}`)
+        .get(`https://localhost:44387/cars?macar=${macar}`)
         .catch((err)=>console.log(err))
         const data = await res.data.cars[0];
         await console.log( data);

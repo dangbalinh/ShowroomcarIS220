@@ -168,8 +168,8 @@ function EmployeePopUp({type, setType, updateEmployee, setUpdateEmployee }) {
     };
 
     const handleUpdateEmployee = async () => {
-        console.log(updateEmployee._id);
-        HandleApiEmployee.updateEmployee(updateEmployee._id, dataUpdate)
+        console.log(updateEmployee.id);
+        HandleApiEmployee.updateEmployee(updateEmployee.id, dataUpdate)
             .then(async (res) => {
                 await Swal.fire({
                     position: "center",

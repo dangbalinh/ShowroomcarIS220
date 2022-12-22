@@ -74,7 +74,7 @@ function EmployeeManagement() {
                     showConfirmButton: false,
                     timer: 500
                 });
-                setData(data.filter((item) => item._id !== id));
+                setData(data.filter((item) => item.id !== id));
             })
             .catch((err) => {
                 Swal.fire({
@@ -264,13 +264,13 @@ function EmployeeManagement() {
                                 <Grid item xs={3}>
                                     <Item>
                                         <Button variant="outlined" size="small" sx={{ fontSize: "10px", marginRight: "12px" }}
-                                            onClick={() => handleReadInfo(item._id)} >Chi tiết</Button>
+                                            onClick={() => handleReadInfo(item.id)} >Chi tiết</Button>
                                         <IconButton
                                             color="primary"
                                             size="medium"
                                             sx={{ padding: "8px 6px" }}
                                             onClick={() => {
-                                                handleClickUpdate(item._id);
+                                                handleClickUpdate(item.id);
                                             }}
                                         >
                                             <Edit sx={{ fontSize: "22px" }} />
@@ -280,9 +280,9 @@ function EmployeeManagement() {
                                             size="medium"
                                             color="error"
                                             onClick={() => {
-                                                console.log(item._id);
+                                                console.log(item.id);
                                                 setOpenDeleteModal(true);
-                                                setId(item._id);
+                                                setId(item.id);
                                             }}
                                         >
                                             <DeleteOutline

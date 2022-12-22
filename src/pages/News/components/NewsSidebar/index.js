@@ -17,7 +17,7 @@ export default function NewsSidebar() {
             {allData?.slice(0, 5).map((news, index) => {
                 return (
                     <Link
-                        to={`/readnews/${news._id}`}
+                        to={`/readnews/${news.id}`}
                         key={index}
                         className={styles.link}
                     >

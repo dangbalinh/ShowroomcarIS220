@@ -54,8 +54,6 @@ function CarManagement() {
     const pageSize = 10;
 
     // Get API
-
-
     useEffect(() => {
         HandleApisCustomer.getCustomerByPageIndex(pageIndex).then((res) => {
             setData(res.customers);
@@ -63,8 +61,6 @@ function CarManagement() {
         });
     }, [pageIndex]);
     // handle event
-
-
 
     const handlePageChange = (e, p) => {
         setPageIndex(p - 1);
@@ -82,7 +78,7 @@ function CarManagement() {
                     timer: 1500
                 });
                 console.log(data);
-                setData(data.filter((item) => item._id !== id));
+                setData(data.filter((item) => item.id !== id));
             })
             .catch((err) => {
                 Swal.fire({
@@ -272,12 +268,12 @@ function CarManagement() {
                                     {/* Update, delete button */}
                                     <Item>
                                     <Button variant="outlined" size="small" sx={{ fontSize: "10px",          marginRight: "12px" }}
-                                            onClick={() => handleReadInfo(item._id)} >Chi tiết</Button>
+                                            onClick={() => handleReadInfo(item.id)} >Chi tiết</Button>
                                         <IconButton
                                             color="primary"
                                             size="medium"
                                             onClick={() => {
-                                                handleClickUpdate(item._id);
+                                                handleClickUpdate(item.id);
                                             }}
                                         >
                                             <Edit sx={{ fontSize: "22px" }} />
@@ -287,9 +283,9 @@ function CarManagement() {
                                             size="medium"
                                             color="error"
                                             onClick={() => {
-                                                console.log(item._id);
+                                                console.log(item.id);
                                                 setOpenDeleteModal(true);
-                                                setId(item._id);
+                                                setId(item.id);
                                             }}
                                         >
                                             <DeleteOutline

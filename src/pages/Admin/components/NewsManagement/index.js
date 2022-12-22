@@ -79,7 +79,7 @@ function NewsManagement() {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                setData(data.filter((item) => item._id !== id));
+                setData(data.filter((item) => item.id !== id));
             })
             .catch((err) => {
                 Swal.fire({
@@ -247,7 +247,7 @@ function NewsManagement() {
                                             color="primary"
                                             size="medium"
                                             onClick={() => {
-                                                handleClickUpdate(item._id);
+                                                handleClickUpdate(item.id);
                                             }}
                                         >
                                             <Edit sx={{ fontSize: "22px" }} />{" "}
@@ -257,7 +257,7 @@ function NewsManagement() {
                                             color="error"
                                             onClick={() => {
                                                 setOpenDeleteModal(true);
-                                                setId(item._id);
+                                                setId(item.id);
                                             }}
                                         >
                                             <DeleteOutline

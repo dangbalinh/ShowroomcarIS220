@@ -208,7 +208,7 @@ function CarManagement() {
                     timer: 1500,
                 });
                 console.log(data);
-                setNewData(data.filter((item) => item._id !== id));
+                setNewData(data.filter((item) => item.id !== id));
             })
             .catch((err) => {
                 Swal.fire({
@@ -504,7 +504,7 @@ function CarManagement() {
                                                 marginRight: "12px",
                                             }}
                                             onClick={() =>
-                                                handleReadInfo(item._id)
+                                                handleReadInfo(item.id)
                                             }
                                         >
                                             Chi tiết
@@ -515,7 +515,7 @@ function CarManagement() {
                                                 size="medium"
                                                 sx={{ padding: "8px 6px" }}
                                                 onClick={() => {
-                                                    handleClickUpdate(item._id);
+                                                    handleClickUpdate(item.id);
                                                 }}
                                             >
                                                 <Edit
@@ -532,10 +532,10 @@ function CarManagement() {
                                                 color="error"
                                                 onClick={() => {
                                                     setOpenDeleteModal(true);
-                                                    setId(item._id);
+                                                    setId(item.id);
                                                 }}
                                                 // onClick={() => {
-                                                //     handleClickDelete(item._id);
+                                                //     handleClickDelete(item.id);
                                                 // }}
                                             >
                                                 <DeleteOutline

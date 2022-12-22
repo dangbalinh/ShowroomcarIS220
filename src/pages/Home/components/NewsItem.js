@@ -3,7 +3,7 @@ import { memo } from "react";
 
 function NewsItem({data}) {
     return (
-        <a href={`/readnews/${data._id}`} className={style.container}>
+        <a href={`/readnews/${data.id}`} className={style.container}>
             <img
                 src={data.image}
                 alt="News img"

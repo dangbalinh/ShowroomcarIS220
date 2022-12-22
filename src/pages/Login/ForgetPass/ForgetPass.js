@@ -8,7 +8,7 @@ const ForgetPass = (props) => {
 
     const sendRequestSU = async () => {
         const res = await axios
-            .post(`https://showroomcar104.onrender.com/users/forgotPassword`, {
+            .post(`https://localhost:44387/users/forgotPassword`, {
                 email: String(props.inputs.email),
             })
             .catch((err) => {

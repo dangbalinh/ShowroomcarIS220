@@ -196,8 +196,8 @@ function CarPopup({ type, setType, updateCar, setUpdateCar }) {
     };
 
     const handleUpdateCar = async () => {
-        console.log(updateCar._id);
-        HandleApi.updateCar(updateCar._id, data)
+        console.log(updateCar.id);
+        HandleApi.updateCar(updateCar.id, data)
             .then(async (res) => {
                 await Swal.fire({
                     position: "center",

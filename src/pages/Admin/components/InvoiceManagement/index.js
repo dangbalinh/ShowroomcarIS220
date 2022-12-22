@@ -127,7 +127,7 @@ function InvoiceManagement() {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                setData(data.filter((item) => item._id !== id));
+                setData(data.filter((item) => item.id !== id));
             })
             .catch((err) => {
                 Swal.fire({
@@ -384,7 +384,7 @@ function InvoiceManagement() {
                                                 marginRight: "10px",
                                             }}
                                             onClick={() =>
-                                                handleReadInfo(item._id)
+                                                handleReadInfo(item.id)
                                             }
                                         >
                                             Chi tiết
@@ -395,7 +395,7 @@ function InvoiceManagement() {
                                             size="medium"
                                             onClick={() => {
                                                 setOpenEditModal(isDonDatHang(item.tinhtrang));
-                                                setId(item._id); }}
+                                                setId(item.id); }}
                                         >
                                             <Edit sx={{ fontSize: "22px" }} />
                                         </IconButton>
@@ -467,7 +467,7 @@ function InvoiceManagement() {
                                             color="error"
                                             onClick={() => {
                                                 setOpenDeleteModal(isDonDatHang(item.tinhtrang));
-                                                setId(item._id);
+                                                setId(item.id);
                                             }}
                                         >
                                             <DeleteOutline

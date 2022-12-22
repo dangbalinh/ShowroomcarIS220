@@ -136,7 +136,7 @@ const Register = () => {
     */
       const sendRequestSU = async ()=>{
         const res = await axios
-        .post(`https://showroomcar104.onrender.com/users`,{
+        .post(`https://localhost:44387/users`,{
           name:String(inputs.name),
           email:String(inputs.email),
           password:String(inputs.password)

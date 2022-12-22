@@ -98,7 +98,7 @@ function NewsPopup({ type, setType, updatePost, setUpdatePost }) {
 
 
     const handleUpdatePost = async () => {
-        HandleNewsApi.updateNews(updatePost._id, data)
+        HandleNewsApi.updateNews(updatePost.id, data)
             .then(async (res) => {
                 await Swal.fire({
                     position: "center",

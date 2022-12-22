@@ -6,7 +6,7 @@ function ItemCar({ data }) {
     return (
         <div className={style.carContainer}>
             <div className={style.carName}>{data.ten}</div>
-            <a href={`/detailproduct/${data._id}`}>
+            <a href={`/detailproduct/${data.id}`}>
                 <img className={style.carImg} src={data.hinhanh} alt={data.ten} />
             </a>
             <a className={style.carLink} href="/contact">

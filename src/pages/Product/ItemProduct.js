@@ -10,7 +10,7 @@ function ItemProduct({data}){
                         src={data.hinhanh}
                         alt="carimg"
                     />
-                    <a className={styles.linkDiscover} href={`/detailproduct/${data._id}`}>Chi tiết</a>
+                    <a className={styles.linkDiscover} href={`/detailproduct/${data.id}`}>Chi tiết</a>
                 </div>
             </div>
         </>
