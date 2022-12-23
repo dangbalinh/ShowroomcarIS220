@@ -524,7 +524,7 @@ function InvoicePopUp({type, setType, updateInvoice, setUdateInvoice}) {
                                                     <Item>{index + 1}</Item>
                                                 </Grid>
                                                 <Grid item xs={5.7}>
-                                                    <Item>{item.ten}</Item>
+                                                    <Item>{item.tenxe}</Item>
                                                 </Grid>
                                                 <Grid item xs={1.8}>
                                                     <Item>{item.soluong}</Item>
