@@ -31,7 +31,7 @@ const deleteEmployee = async (id) => {
 };
 
 const createEmployee = async (data) => {
-    return await axiosInstance.post(`/users/employees`, data);
+    return await axiosInstance.post(`/employees`, data);
 }
 
 const updateEmployee = async (id, data) => {

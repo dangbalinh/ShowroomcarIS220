@@ -255,7 +255,7 @@ function EmployeeManagement() {
                                     <Item>{item.gioitinh}</Item>
                                 </Grid>
                                 <Grid item xs={2}>
-                                    <Item>{` 0${item.sdt}`}</Item>
+                                    <Item>{item.sdt}</Item>
                                 </Grid>
                                 <Grid item xs={2}>
                                     <Item>{item.cccd}</Item>
