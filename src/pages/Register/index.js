@@ -136,7 +136,7 @@ const Register = () => {
     */
       const sendRequestSU = async ()=>{
         const res = await axios
-        .post(`https://localhost:44387/users`,{
+        .post(`https://localhost:7263/users`,{
           name:String(inputs.name),
           email:String(inputs.email),
           password:String(inputs.password)
@@ -152,7 +152,7 @@ const Register = () => {
         return data;
       }
     const handleSubmit = (e) => {
-        if(isSubscribed==false || errors.nameError!=""|| errors.emailError!=""|| errors.passwordError!=""||errors.confirmError!="")
+        if(isSubscribed===false || errors.nameError!==""|| errors.emailError!==""|| errors.passwordError!==""||errors.confirmError!=="")
         {
             e.preventDefault();
             alert("Register failed!");

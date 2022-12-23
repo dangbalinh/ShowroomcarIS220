@@ -15,7 +15,7 @@ const getAllCustomers = async () => {
 const getCustomerById = async (id) => {
     return await axiosInstance.get(`/users/customers/${id}`);
 };
-const getCustomerByPageIndex = async (index) => {
+const getCustomerByPageIndex = async (index=0) => {
     return await axiosInstance.get(`/users/customers?pageIndex=${index}`);
 };
 const getCustomerByName = async (name) => {
