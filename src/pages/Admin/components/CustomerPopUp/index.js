@@ -64,12 +64,13 @@ function CustomerPopup({type, setType, updateCustomer, setUpdateCustomer }) {
     const inputType = ["text","number", "text", "text", "number", "text" ,"password",/*"password"*/];
     const data = {
         name: name,
-        sdt: Number(phoneNumber),
+        sdt: phoneNumber,
         ngaysinh: dateOfBirth,
         diachi: address,
-        cccd: Number(cccd),
+        cccd: cccd,
         email: email,
         password: password,
+        gioitinh: "null"
         // passwordConfirm: passwordConfirm
       
     };
@@ -110,9 +111,9 @@ function CustomerPopup({type, setType, updateCustomer, setUpdateCustomer }) {
     // object data
     const dataUpdate = {
         name: name, 
-        sdt: Number(phoneNumber),
+        sdt: phoneNumber,
         ngaysinh: dateOfBirth,
-        cccd: Number(cccd),
+        cccd: cccd,
         diachi: address
     }
 
