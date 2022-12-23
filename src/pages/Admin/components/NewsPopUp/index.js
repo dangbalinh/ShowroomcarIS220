@@ -92,7 +92,7 @@ function NewsPopup({ type, setType, updatePost, setUpdatePost }) {
             setDateSource(updatePost.dateSource);
             setAuthor(updatePost.author);
             if (updatePost.detail)
-                setDetail(updatePost.detail[0]);
+                setDetail(updatePost.detail);
         }
     }, [updatePost]);
 
