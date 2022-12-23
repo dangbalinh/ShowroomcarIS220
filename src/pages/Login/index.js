@@ -75,7 +75,7 @@ const Login = () => {
     };
     const sendRequestSU = async () => {
         const res = await axios
-            .post(`https://localhost:44387/users/login`, {
+            .post(`https://localhost:7263/users/login`, {
                 email: String(inputs.email),
                 password: String(inputs.password),
             })
