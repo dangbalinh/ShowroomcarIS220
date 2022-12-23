@@ -73,7 +73,7 @@ const PassReset = () => {
         }
     }
     const authAxios = axios.create({
-      baseURL: 'https://localhost:44387/users',
+      baseURL: 'https://localhost:7263/users',
       headers:{
         Authorization:`Bearer ${token}`
       }
@@ -81,8 +81,7 @@ const PassReset = () => {
     const sendRequestSU = async ()=>{
         const res = await authAxios
         .put(`/resetPassword`,{
-          password:String(inputs.password),
-          verifyToken:String(token)
+          password:String(inputs.password)
         })
         .catch((err)=>console.log(err))
     
@@ -91,7 +90,7 @@ const PassReset = () => {
         return data;
       }
     const handleSubmit = (e) => {
-        if(errors.passwordError!=""||errors.confirmError!="")
+        if(errors.passwordError!==""||errors.confirmError!=="")
         {
             e.preventDefault();
             alert("Change failed!");

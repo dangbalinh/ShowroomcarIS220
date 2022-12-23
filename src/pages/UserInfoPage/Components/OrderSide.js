@@ -56,7 +56,7 @@ const OrderSide = ({ setDetail }) => {
     };
     //useEffect(() => { setDidMount(true) }, [])
     const authAxios = axios.create({
-        baseURL: "https://showroomcar104.onrender.com",
+        baseURL: "https://localhost:7263",
         headers: {
             Authorization: `Bearer ${token}`,
         },

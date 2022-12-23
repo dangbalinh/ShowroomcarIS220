@@ -19,7 +19,7 @@ const DetailOrder = ({item}) => {
         1,2,3,4,2
     ]
     const authAxios = axios.create({
-        baseURL: 'https://showroomcar104.onrender.com',
+        baseURL: 'https://localhost:7263',
         headers:{
           Authorization:`Bearer ${token}`
         }
@@ -35,7 +35,7 @@ const DetailOrder = ({item}) => {
       }
       const getCar = async(macar)=>{
         const res = await axios
-        .get(`https://localhost:44387/cars?macar=${macar}`)
+        .get(`https://localhost:7263/cars?macar=${macar}`)
         .catch((err)=>console.log(err))
         const data = await res.data.cars[0];
         await console.log( data);

@@ -8,7 +8,7 @@ const ForgetPass = (props) => {
 
     const sendRequestSU = async () => {
         const res = await axios
-            .post(`https://localhost:44387/users/forgotPassword`, {
+            .post(`https://localhost:7263/users/forgotPassword`, {
                 email: String(props.inputs.email),
             })
             .catch((err) => {
@@ -20,7 +20,7 @@ const ForgetPass = (props) => {
                 });
             });
         const data = await res.data;
-        if (data.status == 201) {
+        if (data.status === 201) {
             console.log(data.status);
         } else {
             console.log(data.message);
@@ -31,7 +31,7 @@ const ForgetPass = (props) => {
         props.closewindow(false);
     };
     const submitEmail = (e) => {
-        if (props.errors.emailError != "") {
+        if (props.errors.emailError !== "") {
             e.preventDefault();
             alert("submit failed!");
         } else {

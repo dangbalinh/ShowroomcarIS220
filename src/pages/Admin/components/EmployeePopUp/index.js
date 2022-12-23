@@ -122,12 +122,11 @@ function EmployeePopUp({type, setType, updateEmployee, setUpdateEmployee }) {
        gioitinh: sex,
        diachi: address,
        ngaysinh: dateOfBirth,
-       sdt: Number(phone),
+       sdt: phone,
        chucvu: position,
-       cccd: Number(cccd),
+       cccd: cccd,
        email: email,
        password: password,
-       passwordConfirm: passwordConfirm
     };
 
     const dataUpdate = {
@@ -135,8 +134,8 @@ function EmployeePopUp({type, setType, updateEmployee, setUpdateEmployee }) {
         gioitinh: sex,
         diachi: address,
         ngaysinh: dateOfBirth, 
-        sdt: Number(phone),
-        cccd: Number(cccd),
+        sdt: phone,
+        cccd: cccd,
         chucvu: position,
      };
 
@@ -192,9 +191,9 @@ function EmployeePopUp({type, setType, updateEmployee, setUpdateEmployee }) {
             setSex(updateEmployee.gioitinh);
             setAddress(updateEmployee.diachi);
             setDateOfBirth(updateEmployee.ngaysinh);
-            setPhone(updateEmployee.sdt);
+            setPhone(`${updateEmployee.sdt}`);
             setPosition(updateEmployee.chucvu);
-            setCccd(updateEmployee.cccd);
+            setCccd(`${updateEmployee.cccd}`);
             setEmail(updateEmployee.email)
             setPassword(updateEmployee.password);
             setPasswordConfirm(updateEmployee.passwordConfirm);
