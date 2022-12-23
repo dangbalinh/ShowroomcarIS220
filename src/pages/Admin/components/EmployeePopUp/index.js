@@ -102,9 +102,9 @@ function EmployeePopUp({type, setType, updateEmployee, setUpdateEmployee }) {
         "Nhập lại mật khẩu"
     ];
 
-    const inputType = ["text", "text", "text", "text",  "number", "text", "number", "text", "password", "password"];
+    const inputType = ["text", "text", "text", "text",  "text", "text", "text", "text", "password", "password"];
 
-    const inputTypeUpdate = ["text", "text", "text", "text",  "number", "number", "text"];
+    const inputTypeUpdate = ["text", "text", "text", "text",  "text", "text", "text"];
 
     const inputValueUpdate = [
         employeeName,
@@ -355,7 +355,7 @@ function EmployeePopUp({type, setType, updateEmployee, setUpdateEmployee }) {
                                     <Item>{"Tên nhân viên: " + updateEmployee.name}</Item>
                                     <Item>{"Ngày sinh: " + updateEmployee.ngaysinh}</Item>
                                     <Item>{"Giới tính: " + updateEmployee.gioitinh}</Item>
-                                    <Item>{"Số điện thoại: " + 0 +updateEmployee.sdt}</Item>
+                                    <Item>{"Số điện thoại: " +updateEmployee.sdt}</Item>
                                     <Item>{"CCCD: " + updateEmployee.cccd}</Item>
                                     <Item>{"Địa chỉ: " + updateEmployee.diachi}</Item>
                                     <Item>{"Email: " + updateEmployee.email}</Item>

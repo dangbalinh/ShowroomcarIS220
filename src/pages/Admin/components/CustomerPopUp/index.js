@@ -167,7 +167,7 @@ function CustomerPopup({type, setType, updateCustomer, setUpdateCustomer }) {
         if (updateCustomer !== {}) {
             setName(updateCustomer.name);
             setEmail(updateCustomer.email);
-            setPhoneNumber(updateCustomer.sdt);
+            setPhoneNumber(`${updateCustomer.sdt}`);
             setDateOfBirth(updateCustomer.ngaysinh);
             setAddress(updateCustomer.diachi);
             setPassword(updateCustomer.password);
