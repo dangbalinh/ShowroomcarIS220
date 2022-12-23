@@ -86,7 +86,7 @@ const PassReset = () => {
         })
         .catch((err)=>console.log(err))
     
-        const data = await res.data;
+        const data =  res;
         console.log(data);
         return data;
       }

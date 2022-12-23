@@ -258,6 +258,7 @@ function InvoicePopUp({type, setType, updateInvoice, setUdateInvoice}) {
         // marginLeft: "20px",
     }));
 
+    console.log(updateInvoice);
     return (
         <>
             {type === "create" && (
@@ -410,7 +411,7 @@ function InvoicePopUp({type, setType, updateInvoice, setUdateInvoice}) {
                                                         <Item>{index + 1}</Item>
                                                     </Grid>
                                                     <Grid item xs={5.5}>
-                                                        <Item>{item.tenxe}</Item>
+                                                        <Item>{item.ten}</Item>
                                                     </Grid>
                                                     <Grid item xs={1.8}>
                                                         <Item>{item.soluong}</Item>
@@ -523,7 +524,7 @@ function InvoicePopUp({type, setType, updateInvoice, setUdateInvoice}) {
                                                     <Item>{index + 1}</Item>
                                                 </Grid>
                                                 <Grid item xs={5.7}>
-                                                    <Item>{item.tenxe}</Item>
+                                                    <Item>{item.ten}</Item>
                                                 </Grid>
                                                 <Grid item xs={1.8}>
                                                     <Item>{item.soluong}</Item>

@@ -79,7 +79,7 @@ function CarManagement() {
             HandleApi.getCarByPageIndex(pageIndex).then((res) => {
                 setData(res.cars);
                 setNewData(res.cars);
-                setDataLength(res.totalCarsFilter);
+                setDataLength(res.totalCars);
             });
         } else {
             HandleApi.getCarByPageIndexBrand(typeCar, pageIndex).then((res) => {
@@ -94,7 +94,7 @@ function CarManagement() {
         HandleApi.getCarByPageIndex(0).then((res) => {
             setData(res.cars);
             setNewData(res.cars);
-            setDataLength(res.totalCarsFilter);
+            setDataLength(res.totalCars);
         });
     }, []);
 
