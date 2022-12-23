@@ -14,7 +14,7 @@ const AutoComplete = () => {
 
     const sendRequest = async(query)=>{
       const res = await axios
-      .get(`https://localhost:44387/cars?search=${query}`)
+      .get(`https://localhost:7263/cars?search=${query}`)
       .catch((err)=>console.log(err))
       const data = await res.data.cars;
       console.log(data);
