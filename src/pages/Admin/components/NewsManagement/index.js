@@ -165,7 +165,7 @@ function NewsManagement() {
                 <Box sx={{ padding: "50px" }}>
                     <h3 className={styleDetail.title}>{detail.title}</h3>
                     <p className={styleDetail.date}>{detail.dateSource}</p>
-                    <div className={styleDetail.detail}>{detail.detail}</div>
+                    <div className={styleDetail.detail}>{parse(detail.detail)}</div>
                 </Box>
             </div>
         </div>)

@@ -99,7 +99,7 @@ function CustomerPopup({type, setType, updateCustomer, setUpdateCustomer }) {
         "Địa chỉ"
     ];
 
-    const inputTypeUpdate = ["text", "number", "text", "number",  "text"];
+    const inputTypeUpdate = ["text", "number", "text", "text",  "text"];
     const inputValueUpdate = [
         name,
         phoneNumber,
@@ -171,6 +171,8 @@ function CustomerPopup({type, setType, updateCustomer, setUpdateCustomer }) {
             setDateOfBirth(updateCustomer.ngaysinh);
             setAddress(updateCustomer.diachi);
             setPassword(updateCustomer.password);
+            setCccd(updateCustomer.cccd);
+            
             // setPasswordConfirm(updateCustomer.passwordConfirm);
         }
     }, [updateCustomer]);
